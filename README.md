@@ -1,6 +1,9 @@
+##Automated Web Testing
+
 This is the repo for deliverable 3 of IS2545 - Software Quality Assurance. I wrote 3 user stories and 9 scenarios in total using Selenium and Cucumber.
 
 My user stories are as follows:
+
 * As a user
 > I want to login
 > So that I can make purchase using my account
@@ -63,6 +66,7 @@ My user stories are as follows:
                 Then error no matching should be shown
 
 My main concerns are as follows:
+
 1. I find it very hard to do test using Selenium and Cucumber together, because Cucumber always try to run all scenarios written in feature file, even some of them do not have corresponding methods in StepDefinition file. It makes the coding process complicated, because I have to temporarily move some of scenarios out of my feature file to make program run quickly and bug-free. 
 
 2. Since @Before and @After methods runs for each test case, the runtime is about 5 mins for all test cases. I think it has room for improvement, but I find out this post: [Why instantiate WebDriver for each @Test method?](http://stackoverflow.com/questions/19323231/why-instantiate-webdriver-for-each-test-method). It looks like if all tests would run in one go and it fails, we would be unable to tell where it failed.
